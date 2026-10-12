@@ -3,57 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ed">
+    <meta name="description" content="Чайный Дом — сорта чая, культура заваривания и история чайных традиций.">
     <title>Чайный Дом — Заваривание</title>
     <style>
-        body { font-family: Georgia, serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f0e6; color: #3e2f1c; }
-        nav { background: #4a6741; padding: 15px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
-        nav a { color: #f5f0e6; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        h1 { color: #4a6741; }
-        .card { background: white; padding: 20px; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        footer { margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #ccc; color: #666; }
-    </style>
+    :root{--ink:#202820;--muted:#687167;--green:#344b3b;--green2:#526b55;--cream:#f5f3ed;--paper:#fffefa;--line:#e4e5dc;--gold:#b48a53;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.7}
+    a{color:inherit}a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.shell{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topline{height:5px;background:var(--gold)}.header{padding:24px 0 18px;background:var(--paper);border-bottom:1px solid var(--line)}.headrow{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:12px;font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:700;letter-spacing:-.5px}.brandmark{width:42px;height:42px;display:grid;place-items:center;border:1px solid #d6c7ae;border-radius:50%;color:var(--green);font-size:22px}
+    .brand small{display:block;font-family:inherit;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:-2px}
+    nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}nav a{padding:9px 13px;text-decoration:none;border-radius:6px;color:#4c574d;font-size:14px;font-weight:600;transition:background .2s,color .2s}nav a:hover,nav a[aria-current="page"]{background:#e9ede5;color:var(--green)}
+    main{padding:52px 0 72px}.eyebrow{margin:0 0 12px;color:var(--green2);font-size:11px;font-weight:750;letter-spacing:2.4px;text-transform:uppercase}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;font-weight:500;letter-spacing:-.6px}h1{font-size:clamp(36px,5vw,58px);margin:0 0 18px;color:var(--green)}h2{font-size:29px;margin:0 0 14px}h3{font-size:23px;margin:0 0 10px}p{margin:0 0 16px}.lead{max-width:700px;font-size:18px;color:#586157;line-height:1.8}.hero{padding:clamp(30px,6vw,72px);background:linear-gradient(120deg,#e7ece3,#f6f1e7 76%);border:1px solid #e0e4d9;border-radius:14px;position:relative;overflow:hidden}.hero:after{content:"茶";position:absolute;right:5%;top:0;font-family:Georgia,serif;font-size:clamp(150px,23vw,280px);line-height:1;color:#344b3b;opacity:.055;pointer-events:none}.hero>*{position:relative;z-index:1}.hero .lead{max-width:650px}.button{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;padding:12px 19px;background:var(--green);color:white;text-decoration:none;border-radius:6px;font-weight:650;font-size:14px;transition:background .2s,transform .2s}.button:hover{background:#25382b;transform:translateY(-1px)}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:52px 0 22px}.sectionhead p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:26px;min-width:0;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:#cbd4c7}.card p:last-child{margin-bottom:0}.card p{color:#5d665d}.number{display:block;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:1.5px;margin-bottom:14px}.tag{display:inline-block;padding:4px 9px;background:#edf0e9;border-radius:4px;color:var(--green);font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;margin-bottom:14px}.intro{margin-bottom:32px;max-width:760px}.intro p{color:var(--muted);font-size:17px}.list{padding-left:20px;color:#535e54}.list li{padding:5px 0}.quote{margin:32px 0 0;padding:24px 28px;border-left:3px solid var(--gold);background:#efeee6;color:#4c584d;font-family:Georgia,serif;font-size:20px}.footer{background:#26382d;color:#dce2d9;padding:30px 0}.footerrow{display:flex;justify-content:space-between;align-items:center;gap:22px}.footer p{margin:0;font-size:13px;color:#b9c5b9}.counter{margin-top:15px;min-height:31px}.counter a{display:inline-block}.counter img{vertical-align:middle}.contactlist{list-style:none;padding:0;margin:20px 0 0}.contactlist li{padding:13px 0;border-bottom:1px solid var(--line)}.contactlist li:last-child{border-bottom:0}.contactlist strong{display:block;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}.contactlist a{text-decoration:none;color:var(--green)}.contactlist a:hover{text-decoration:underline}.hours{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid var(--line)}.hours:last-child{border-bottom:0}
+    @media(max-width:800px){.headrow{align-items:flex-start;flex-direction:column;gap:18px}nav{gap:3px}nav a{padding:8px 10px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sectionhead{align-items:flex-start;flex-direction:column}.footerrow{align-items:flex-start;flex-direction:column}}
+    @media(max-width:540px){.shell{width:min(100% - 28px,var(--max))}.header{padding:18px 0 14px}.brand{font-size:22px}nav{width:100%;gap:4px}nav a{font-size:13px;padding:7px 8px}main{padding:30px 0 48px}.grid{grid-template-columns:1fr}.card{padding:22px}.hero{padding:30px 23px}.lead{font-size:16px}h2{font-size:26px}.hours{font-size:14px}}
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="sorts.html">Сорта</a>
-        <a href="brewing.html">Заваривание</a>
-        <a href="history.html">История</a>
-        <a href="contact.html">Контакты</a>
-    </nav>
-
-    <h1>Как заваривать чай</h1>
-
-    <div class="card">
-        <h2>1. Температура воды</h2>
-        <p>Не кипятите воду для зелёного и белого чая — 70–80 °C достаточно. Чёрный и пуэр любят 90–95 °C.</p>
-    </div>
-    <div class="card">
-        <h2>2. Пропорции</h2>
-        <p>Классика — 1 чайная ложка на 200 мл воды. Для улуна и пуэра можно больше — они выдерживают многократное заваривание.</p>
-    </div>
-    <div class="card">
-        <h2>3. Время</h2>
-        <p>Зелёный — 1–2 минуты. Чёрный — 3–5 минут. Пуэр — 30 секунд при первом проливе, дальше увеличивайте.</p>
-    </div>
-    <div class="card">
-        <h2>4. Посуда</h2>
-        <p>Идеально — гайвань или чайник из исинской глины. Стекло подойдёт для наблюдения за раскрытием листа.</p>
-    </div>
-
-    <footer>
-        <p>© Чайный Дом, 2026</p>
+    <div class="topline"></div>
+    <header class="header"><div class="shell headrow">
+        <a class="brand" href="index.html"><span class="brandmark" aria-hidden="true">茶</span><span>Чайный Дом<small>Культура чаепития</small></span></a>
+        <nav aria-label="Основная навигация">
+            <a href="index.html">Главная</a>
+            <a href="sorts.html">Сорта</a>
+            <a href="brewing.html" aria-current="page">Заваривание</a>
+            <a href="history.html">История</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </div></header>
+    <main class="shell">
+<section class="intro"><p class="eyebrow">Практика</p><h1>Искусство правильного заваривания</h1><p>Не существует одной универсальной формулы: ориентируйтесь на рекомендации к конкретному чаю и корректируйте параметры под свой вкус. Эти значения — удобная отправная точка.</p></section><section class="grid"><article class="card"><span class="number">01 / ТЕМПЕРАТУРА</span><h2>Подберите воду</h2><p>Зелёный и белый чай часто раскрываются при 70–80 °C. Для чёрного чая и многих пуэров обычно подходит вода около 90–100 °C.</p></article><article class="card"><span class="number">02 / ПРОПОРЦИИ</span><h2>Соблюдайте баланс</h2><p>Для начала используйте примерно 1 чайную ложку листа на 200 мл воды. Количество зависит от размера листа и желаемой крепости.</p></article><article class="card"><span class="number">03 / ВРЕМЯ</span><h2>Следите за настоем</h2><p>Зелёный чай часто заваривают 1–3 минуты, чёрный — 3–5 минут. При проливном способе время обычно значительно короче.</p></article><article class="card"><span class="number">04 / ПОСУДА</span><h2>Выберите удобное</h2><p>Чайник с фильтром подойдёт на каждый день. Гайвань удобна для проливов, а стеклянная посуда позволяет наблюдать за раскрытием листа.</p></article><article class="card"><span class="number">05 / ВКУС</span><h2>Экспериментируйте</h2><p>Получилось слишком горько — попробуйте снизить температуру или время. Не хватает насыщенности — немного увеличьте количество листа.</p></article><article class="card"><span class="number">06 / ПОВТОРНЫЕ ПРОЛИВЫ</span><h2>Дайте листу раскрыться</h2><p>Некоторые улуны и пуэры хорошо выдерживают несколько коротких завариваний. Увеличивайте время постепенно, ориентируясь на вкус.</p></article></section><blockquote class="quote">Лучший рецепт — тот, который помогает вам почувствовать вкус именно этого чая.</blockquote>
+    </main>
+    <footer class="footer"><div class="shell footerrow"><div><a class="brand" href="index.html" style="color:#f5f3ed;font-size:20px"><span class="brandmark" style="border-color:#657669;color:#e5d3b8">茶</span><span>Чайный Дом<small style="color:#b9c5b9">Культура чаепития</small></span></a><p style="margin-top:12px">© Чайный Дом, 2026. Время для хорошего чая.</p></div><div><p>Исследуйте вкус. Берегите традиции.</p><div class="counter">
         <!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
-target="_blank"><img id="licnt5E13" width="88" height="31" style="border:0" 
-title="LiveInternet: показано число просмотров и посетителей за 24 часа"
-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
-alt=""/></a><script>(function(d,s){d.getElementById("licnt5E13").src=
-"https://counter.yadro.ru/hit?t52.6;r"+escape(d.referrer)+
-((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
-(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
-";h"+escape(d.title.substring(0,150))+";"+Math.random()})
-(document,screen)</script><!--/LiveInternet-->
-    </footer>
+        target="_blank"><img id="licnt5E13" width="88" height="31" style="border:0" 
+        title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+        alt=""/></a><script>(function(d,s){d.getElementById("licnt5E13").src=
+        "https://counter.yadro.ru/hit?t52.6;r"+escape(d.referrer)+
+        ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+        (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+        ";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+        (document,screen)</script><!--/LiveInternet-->
+</div></div></div></footer>
 </body>
 </html>
