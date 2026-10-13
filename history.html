@@ -92,6 +92,7 @@
             <div>
                 <p>Исследуйте вкус. Берегите традиции.</p>
                 <div class="counter">
+					<div id="top100_widget"></div>
                     <!-- liveinternet -->
                     <a href="https://www.liveinternet.ru/click" target="_blank"><img id="licnt0540" width="88" height="31" style="border:0"
                         title="LiveInternet: показано число просмотров и посетителей за 24 часа"
@@ -109,9 +110,9 @@
                         (w[c] = w[c] || []).push(function() {
                             var options = {
                                 project: 7752852,
-                                attributes_dataset: [ "data-tea-block" ],
-                                trackHashes: true,
-                                user_id: null,
+								attributes_dataset: ["data-tea-block"],
+								element: 'top100_widget',
+								widgetColor: '#fffefa'
                             };
                             try {
                                 w.top100Counter = new top100(options);
