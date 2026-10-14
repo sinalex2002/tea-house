@@ -42,6 +42,22 @@
     <noscript>
         <img src="//counter.rambler.ru/top100.cnt?pid=7752852" alt="Топ-100" />
     </noscript>
+    <!-- END Top100 (Kraken) Counter -->
+
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3803666", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+    </script>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3803666;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <!-- /Top.Mail.Ru counter -->
 
     <header class="header">
         <div class="shell headrow">
@@ -137,9 +153,31 @@
 						(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
 						";h"+escape(d.title.substring(0,150))+";"+Math.random()})
 						(document,screen)</script>
+
+					<!-- Top.Mail.Ru logo -->
+					<a href="https://top.mail.ru/" target="_blank" rel="nofollow" aria-label="Top.Mail.Ru">
+						<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" role="img">
+							<rect width="88" height="31" fill="#26382d" stroke="#b48a53" stroke-width="1"></rect>
+							<text x="6" y="13" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="800" fill="#e5d3b8" letter-spacing="0.5">TOP.MAIL</text>
+							<text x="6" y="24" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="800" fill="#b48a53" letter-spacing="0.5">СТАТИСТИКА</text>
+							<rect x="70" y="16" width="3" height="6" fill="#b48a53"></rect>
+							<rect x="75" y="11" width="3" height="11" fill="#b48a53"></rect>
+							<rect x="80" y="7" width="3" height="15" fill="#b48a53"></rect>
+						</svg>
+					</a>
+					<!-- /Top.Mail.Ru logo -->
 				</div>
             </div>
         </div>
     </footer>
+
+    <!-- Цели MyTracker: клик по кнопке на главной -->
+    <script>
+    document.addEventListener("click", function (e) {
+        var el = e.target.closest("[data-tea-block='hero-button']");
+        if (!el) return;
+        (window._tmr = window._tmr || []).push({ id: "3803666", type: "reachGoal", goal: "hero_click" });
+    });
+    </script>
 </body>
 </html>
