@@ -11,6 +11,38 @@
 <body>
     <div class="topline"></div>
 
+    <!-- Top100 (Kraken) Counter -->
+    <script>
+        (function (w, d, c) {
+            (w[c] = w[c] || []).push(function() {
+                var options = {
+                    project: 7752852,
+					attributes_dataset: [ "data-tea-block" ],
+					trackHashes: true,
+					user_id: null,
+                };
+                try {
+                    w.top100Counter = new top100(options);
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src =
+            (d.location.protocol == "https:" ? "https:" : "http:") +
+            "//st.top100.ru/top100/top100.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(window, document, "_top100q");
+    </script>
+    <noscript>
+        <img src="//counter.rambler.ru/top100.cnt?pid=7752852" alt="Топ-100" />
+    </noscript>
+
     <header class="header">
         <div class="shell headrow">
             <a class="brand" href="index.html">
@@ -36,9 +68,7 @@
                 традиции и искусство неспешного чаепития. Изучайте сорта, открывайте
                 новые способы заваривания и находите свой чайный ритуал.
             </p>
-            <a class="button" href="sorts.html">
-                Открыть мир чая <span aria-hidden="true">&nbsp;→</span>
-            </a>
+            <a class="button" href="sorts.html" data-tea-block="hero-button">Открыть мир чая →</a>
         </section>
 
         <div class="sectionhead">
@@ -54,19 +84,19 @@
                 <span class="number">01 / СОРТА</span>
                 <h3>Найдите свой вкус</h3>
                 <p>От насыщенного чёрного чая до нежного белого и многогранного улуна.</p>
-                <a href="sorts.html">Изучить сорта →</a>
+                <a href="sorts.html" data-tea-block="card-sorts">Изучить сорта →</a>
             </article>
             <article class="card">
                 <span class="number">02 / ЗАВАРИВАНИЕ</span>
                 <h3>Раскройте аромат</h3>
                 <p>Температура воды, пропорции и время — детали, которые меняют впечатление.</p>
-                <a href="brewing.html">Узнать секреты →</a>
+                <a href="brewing.html" data-tea-block="card-brewing">Узнать секреты →</a>
             </article>
             <article class="card">
                 <span class="number">03 / ИСТОРИЯ</span>
                 <h3>Прикоснитесь к традициям</h3>
                 <p>Путешествие чая от древнего Китая до современных чайных церемоний.</p>
-                <a href="history.html">Читать историю →</a>
+                <a href="history.html" data-tea-block="card-history">Читать историю →</a>
             </article>
         </section>
 
@@ -87,50 +117,27 @@
             <div>
                 <p>Исследуйте вкус. Берегите традиции.</p>
                 <div class="counter">
-					<div id="top100_widget"></div>
-                    <!-- liveinternet -->
-                    <a href="https://www.liveinternet.ru/click" target="_blank"><img id="licnt0540" width="88" height="31" style="border:0"
-                        title="LiveInternet: показано число просмотров и посетителей за 24 часа"
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
-                        alt=""/></a><script>(function(d,s){d.getElementById("licnt0540").src=
-                        "https://counter.yadro.ru/hit?t52.6;r"+escape(d.referrer)+
-                        ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
-                        (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
-                        ";h"+escape(d.title.substring(0,150))+";"+Math.random()})
-                        (document,screen)</script>
+					<a href="https://top100.rambler.ru/navi/?resourceId=7752720" target="_blank" rel="nofollow" aria-label="Рамблер ТОП100">
+						<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" role="img">
+							<rect width="88" height="31" fill="#26382d" stroke="#b48a53" stroke-width="1"></rect>
+							<text x="6" y="13" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="800" fill="#e5d3b8" letter-spacing="0.5">РАМБЛЕР</text>
+							<text x="6" y="24" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="800" fill="#b48a53" letter-spacing="0.5">ТОП100</text>
+							<circle cx="76" cy="15" r="4" fill="none" stroke="#b48a53" stroke-width="1.5"></circle>
+							<circle cx="76" cy="15" r="1.5" fill="#b48a53"></circle>
+						</svg>
+					</a>
 
-                    <!-- top100 rambler -->
-                    <script>
-                        (function (w, d, c) {
-                        (w[c] = w[c] || []).push(function() {
-                            var options = {
-								project: 7752852,
-								attributes_dataset: ["data-tea-block"],
-								element: 'top100_widget',
-								widgetColor: '#fffefa'
-							};
-                            try {
-                                w.top100Counter = new top100(options);
-                            } catch(e) { }
-                        });
-                        var n = d.getElementsByTagName("script")[0],
-                        s = d.createElement("script"),
-                        f = function () { n.parentNode.insertBefore(s, n); };
-                        s.type = "text/javascript";
-                        s.async = true;
-                        s.src =
-                        (d.location.protocol == "https:" ? "https:" : "http:") +
-                        "//st.top100.ru/top100/top100.js";
-
-                        if (w.opera == "[object Opera]") {
-                        d.addEventListener("DOMContentLoaded", f, false);
-                    } else { f(); }
-                    })(window, document, "_top100q");
-                    </script>
-                    <noscript>
-                      <img src="//counter.rambler.ru/top100.cnt?pid=7752852" alt="Топ-100" />
-                    </noscript>
-                </div>
+					<!-- liveinternet -->
+					<a href="https://www.liveinternet.ru/click" target="_blank"><img id="licnt0540" width="88" height="31" style="border:0"
+						title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+						src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+						alt=""/></a><script>(function(d,s){d.getElementById("licnt0540").src=
+						"https://counter.yadro.ru/hit?t52.6;r"+escape(d.referrer)+
+						((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+						(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+						";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+						(document,screen)</script>
+				</div>
             </div>
         </div>
     </footer>
