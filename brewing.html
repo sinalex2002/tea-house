@@ -17,9 +17,9 @@
             (w[c] = w[c] || []).push(function() {
                 var options = {
                     project: 7752852,
-					attributes_dataset: [ "data-tea-block" ],
-					trackHashes: true,
-					user_id: null,
+                    attributes_dataset: [ "data-tea-block" ],
+                    trackHashes: true,
+                    user_id: null,
                 };
                 try {
                     w.top100Counter = new top100(options);
@@ -66,11 +66,11 @@
                 <span>Чайный Дом<small>Культура чаепития</small></span>
             </a>
             <nav aria-label="Основная навигация">
-                <a href="index.html">Главная</a>
-                <a href="sorts.html">Сорта</a>
-                <a href="brewing.html" aria-current="page">Заваривание</a>
-                <a href="history.html">История</a>
-                <a href="contact.html">Контакты</a>
+                <a href="index.html" data-tea-block="brewing::menu::main">Главная</a>
+                <a href="sorts.html" data-tea-block="brewing::menu::sorts">Сорта</a>
+                <a href="brewing.html" aria-current="page" data-tea-block="brewing::menu::brewing">Заваривание</a>
+                <a href="history.html" data-tea-block="brewing::menu::history">История</a>
+                <a href="contact.html" data-tea-block="brewing::menu::contact">Контакты</a>
             </nav>
         </div>
     </header>
@@ -86,7 +86,7 @@
         </section>
 
         <section class="grid">
-            <article class="card" data-tea-block="brew-temp">
+            <article class="card" data-tea-block="brewing::grid::brew-temp">
                 <span class="number">01 / ТЕМПЕРАТУРА</span>
                 <h2>Подберите воду</h2>
                 <p>
@@ -94,7 +94,7 @@
                     пуэров обычно подходит вода около 90–100 °C.
                 </p>
             </article>
-            <article class="card" data-tea-block="brew-ratio">
+            <article class="card" data-tea-block="brewing::grid::brew-ratio">
                 <span class="number">02 / ПРОПОРЦИИ</span>
                 <h2>Соблюдайте баланс</h2>
                 <p>
@@ -102,7 +102,7 @@
                     Количество зависит от размера листа и желаемой крепости.
                 </p>
             </article>
-            <article class="card" data-tea-block="brew-time">
+            <article class="card" data-tea-block="brewing::grid::brew-time">
                 <span class="number">03 / ВРЕМЯ</span>
                 <h2>Следите за настоем</h2>
                 <p>
@@ -110,7 +110,7 @@
                     способе время обычно значительно короче.
                 </p>
             </article>
-            <article class="card" data-tea-block="brew-vessel">
+            <article class="card" data-tea-block="brewing::grid::brew-vessel">
                 <span class="number">04 / ПОСУДА</span>
                 <h2>Выберите удобное</h2>
                 <p>
@@ -118,7 +118,7 @@
                     а стеклянная посуда позволяет наблюдать за раскрытием листа.
                 </p>
             </article>
-            <article class="card" data-tea-block="brew-taste">
+            <article class="card" data-tea-block="brewing::grid::brew-taste">
                 <span class="number">05 / ВКУС</span>
                 <h2>Экспериментируйте</h2>
                 <p>
@@ -126,7 +126,7 @@
                     Не хватает насыщенности — немного увеличьте количество листа.
                 </p>
             </article>
-            <article class="card" data-tea-block="brew-rebrew">
+            <article class="card" data-tea-block="brewing::grid::brew-rebrew">
                 <span class="number">06 / ПОВТОРНЫЕ ПРОЛИВЫ</span>
                 <h2>Дайте листу раскрыться</h2>
                 <p>
