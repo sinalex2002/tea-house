@@ -17,9 +17,9 @@
             (w[c] = w[c] || []).push(function() {
                 var options = {
                     project: 7752852,
-					attributes_dataset: [ "data-tea-block" ],
-					trackHashes: true,
-					user_id: null,
+                    attributes_dataset: [ "data-tea-block" ],
+                    trackHashes: true,
+                    user_id: null,
                 };
                 try {
                     w.top100Counter = new top100(options);
@@ -66,11 +66,11 @@
                 <span>Чайный Дом<small>Культура чаепития</small></span>
             </a>
             <nav aria-label="Основная навигация">
-                <a href="index.html">Главная</a>
-                <a href="sorts.html" aria-current="page">Сорта</a>
-                <a href="brewing.html">Заваривание</a>
-                <a href="history.html">История</a>
-                <a href="contact.html">Контакты</a>
+                <a href="index.html" data-tea-block="sorts::menu::main">Главная</a>
+                <a href="sorts.html" aria-current="page" data-tea-block="sorts::menu::sorts">Сорта</a>
+                <a href="brewing.html" data-tea-block="sorts::menu::brewing">Заваривание</a>
+                <a href="history.html" data-tea-block="sorts::menu::history">История</a>
+                <a href="contact.html" data-tea-block="sorts::menu::contact">Контакты</a>
             </nav>
         </div>
     </header>
@@ -86,44 +86,45 @@
         </section>
 
         <section class="grid">
-            <article class="card" data-tea-block="tea-black">
+            <article class="card" data-tea-block="sorts::grid::tea-black">
                 <span class="tag">Насыщенный</span>
                 <h2>Чёрный чай</h2>
                 <p>Полностью окисленный чай с выразительным вкусом, терпкостью и глубоким ароматом.</p>
                 <p><strong>Попробуйте:</strong> ассам, цейлон, дарджилинг.</p>
             </article>
-            <article class="card" data-tea-block="tea-green">
+            <article class="card" data-tea-block="sorts::grid::tea-green">
                 <span class="tag">Свежий</span>
                 <h2>Зелёный чай</h2>
                 <p>Быстро обработанный лист сохраняет свежие, травянистые, иногда ореховые ноты.</p>
                 <p><strong>Попробуйте:</strong> сенча, лунцзин, матча.</p>
             </article>
-            <article class="card" data-tea-block="tea-white">
+            <article class="card" data-tea-block="sorts::grid::tea-white">
                 <span class="tag">Нежный</span>
                 <h2>Белый чай</h2>
                 <p>Минимальная обработка и деликатный профиль с цветочными и медовыми оттенками.</p>
                 <p><strong>Попробуйте:</strong> бай хао инь чжэнь, шоу мэй.</p>
             </article>
-            <article class="card" data-tea-block="tea-oolong">
+            <article class="card" data-tea-block="sorts::grid::tea-oolong">
                 <span class="tag">Многогранный</span>
                 <h2>Улун</h2>
                 <p>Чай с разной степенью окисления: от лёгких цветочных вкусов до жареных и насыщенных.</p>
                 <p><strong>Попробуйте:</strong> тегуаньинь, да хун пао.</p>
             </article>
-            <article class="card" data-tea-block="tea-puer">
+            <article class="card" data-tea-block="sorts::grid::tea-puer">
                 <span class="tag">Выдержанный</span>
                 <h2>Пуэр</h2>
                 <p>Чай из Юньнани, который может приобретать сложные землистые, древесные и фруктовые оттенки.</p>
                 <p><strong>Виды:</strong> шу — тёмный, шэн — светлый.</p>
             </article>
-            <article class="card" data-tea-block="tea-howto">
+            <article class="card" data-tea-block="sorts::grid::tea-howto">
                 <span class="tag">Для знакомства</span>
                 <h2>Как выбрать?</h2>
                 <p>
                     Начните с привычных вкусов: чёрный — для насыщенности, зелёный — для свежести,
                     улун — для разнообразия оттенков.
                 </p>
-                <a href="brewing.html" data-tea-block="link-brewing">Перейти к завариванию →</a>
+                <a href="brewing.html"
+                   data-tea-block="sorts::grid::tea-howto::link-brewing">Перейти к завариванию →</a>
             </article>
         </section>
 
@@ -135,7 +136,7 @@
             <p>Ответьте на три вопроса — получите рекомендацию.</p>
         </div>
 
-        <form class="quiz" id="tea-quiz">
+        <form class="quiz" id="tea-quiz" data-tea-block="sorts::quiz::form">
             <div class="quiz-step">
                 <p>1. Какой вкус вам ближе?</p>
                 <div class="quiz-options">
@@ -164,9 +165,11 @@
                 </div>
             </div>
 
-            <button class="button quiz-submit" type="submit" data-tea-block="quiz-submit">Подобрать чай</button>
+            <button class="button quiz-submit" type="submit"
+                    data-tea-block="sorts::quiz::form::quiz-submit">Подобрать чай</button>
 
-            <div class="quiz-result" id="quiz-result" hidden></div>
+            <div class="quiz-result" id="quiz-result" hidden
+                 data-tea-block="sorts::quiz::result"></div>
         </form>
     </main>
 
@@ -267,12 +270,12 @@
             form.addEventListener("submit", function (event) {
                 event.preventDefault();
 
-				if (window.top100Counter) {
-					window.top100Counter.trackEvent("quiz_submit");
-				}
+                if (window.top100Counter) {
+                    window.top100Counter.trackEvent("quiz_submit");
+                }
 
-				// Цель MyTracker
-				(window._tmr = window._tmr || []).push({ id: "3803666", type: "reachGoal", goal: "quiz_submit" });
+                // Цель MyTracker
+                (window._tmr = window._tmr || []).push({ id: "3803666", type: "reachGoal", goal: "quiz_submit" });
 
                 var taste = form.querySelector('input[name="taste"]:checked').value;
                 var time = form.querySelector('input[name="time"]:checked').value;
