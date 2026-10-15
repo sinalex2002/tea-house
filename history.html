@@ -17,9 +17,9 @@
             (w[c] = w[c] || []).push(function() {
                 var options = {
                     project: 7752852,
-					attributes_dataset: [ "data-tea-block" ],
-					trackHashes: true,
-					user_id: null,
+                    attributes_dataset: [ "data-tea-block" ],
+                    trackHashes: true,
+                    user_id: null,
                 };
                 try {
                     w.top100Counter = new top100(options);
@@ -66,11 +66,11 @@
                 <span>Чайный Дом<small>Культура чаепития</small></span>
             </a>
             <nav aria-label="Основная навигация">
-                <a href="index.html">Главная</a>
-                <a href="sorts.html">Сорта</a>
-                <a href="brewing.html">Заваривание</a>
-                <a href="history.html" aria-current="page">История</a>
-                <a href="contact.html">Контакты</a>
+                <a href="index.html" data-tea-block="history::menu::main">Главная</a>
+                <a href="sorts.html" data-tea-block="history::menu::sorts">Сорта</a>
+                <a href="brewing.html" data-tea-block="history::menu::brewing">Заваривание</a>
+                <a href="history.html" aria-current="page" data-tea-block="history::menu::history">История</a>
+                <a href="contact.html" data-tea-block="history::menu::contact">Контакты</a>
             </nav>
         </div>
     </header>
@@ -86,7 +86,7 @@
         </section>
 
         <section class="grid">
-            <article class="card" data-tea-block="history-china">
+            <article class="card" data-tea-block="history::grid::history-china">
                 <span class="number">I / ЛЕГЕНДА</span>
                 <h2>Древний Китай</h2>
                 <p>
@@ -95,7 +95,7 @@
                     постепенно, на протяжении столетий.
                 </p>
             </article>
-            <article class="card" data-tea-block="history-west">
+            <article class="card" data-tea-block="history::grid::history-west">
                 <span class="number">II / ПУТЕШЕСТВИЕ</span>
                 <h2>Путь на Запад</h2>
                 <p>
@@ -104,7 +104,7 @@
                     традиции чаепития.
                 </p>
             </article>
-            <article class="card" data-tea-block="history-russia">
+            <article class="card" data-tea-block="history::grid::history-russia">
                 <span class="number">III / ТРАДИЦИЯ</span>
                 <h2>Чай в России</h2>
                 <p>
@@ -113,7 +113,7 @@
                     повседневной жизни.
                 </p>
             </article>
-            <article class="card" data-tea-block="history-today">
+            <article class="card" data-tea-block="history::grid::history-today">
                 <span class="number">IV / СЕГОДНЯ</span>
                 <h2>Современная культура</h2>
                 <p>
