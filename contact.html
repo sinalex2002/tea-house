@@ -17,9 +17,9 @@
             (w[c] = w[c] || []).push(function() {
                 var options = {
                     project: 7752852,
-					attributes_dataset: [ "data-tea-block" ],
-					trackHashes: true,
-					user_id: null,
+                    attributes_dataset: [ "data-tea-block" ],
+                    trackHashes: true,
+                    user_id: null,
                 };
                 try {
                     w.top100Counter = new top100(options);
@@ -66,11 +66,11 @@
                 <span>Чайный Дом<small>Культура чаепития</small></span>
             </a>
             <nav aria-label="Основная навигация">
-                <a href="index.html">Главная</a>
-                <a href="sorts.html">Сорта</a>
-                <a href="brewing.html">Заваривание</a>
-                <a href="history.html">История</a>
-                <a href="contact.html" aria-current="page">Контакты</a>
+                <a href="index.html" data-tea-block="contact::menu::main">Главная</a>
+                <a href="sorts.html" data-tea-block="contact::menu::sorts">Сорта</a>
+                <a href="brewing.html" data-tea-block="contact::menu::brewing">Заваривание</a>
+                <a href="history.html" data-tea-block="contact::menu::history">История</a>
+                <a href="contact.html" aria-current="page" data-tea-block="contact::menu::contact">Контакты</a>
             </nav>
         </div>
     </header>
@@ -86,17 +86,19 @@
         </section>
 
         <section class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-            <article class="card" data-tea-block="contacts-info">
+            <article class="card" data-tea-block="contact::info::contacts-info">
                 <span class="number">КОНТАКТНАЯ ИНФОРМАЦИЯ</span>
                 <h2>Напишите нам</h2>
                 <ul class="contactlist">
                     <li>
                         <strong>E-mail</strong>
-                        <a href="mailto:info@tea-house.example" data-tea-block="link-email">info@tea-house.example</a>
+                        <a href="mailto:info@tea-house.example"
+                           data-tea-block="contact::info::contacts-info::link-email">info@tea-house.example</a>
                     </li>
                     <li>
                         <strong>Телефон</strong>
-                        <a href="tel:+79000000000" data-tea-block="link-phone">+7 (900) 111-22-33</a>
+                        <a href="tel:+79000000000"
+                           data-tea-block="contact::info::contacts-info::link-phone">+7 (900) 111-22-33</a>
                     </li>
                     <li>
                         <strong>Адрес</strong>
@@ -104,7 +106,7 @@
                     </li>
                 </ul>
             </article>
-            <article class="card" data-tea-block="contacts-hours">
+            <article class="card" data-tea-block="contact::hours::contacts-hours">
                 <span class="number">ВРЕМЯ РАБОТЫ</span>
                 <h2>Когда мы доступны</h2>
                 <div class="hours">
@@ -173,7 +175,7 @@
     <!-- Цели MyTracker: клик по e-mail -->
     <script>
     document.addEventListener("click", function (e) {
-        var el = e.target.closest("[data-tea-block='link-email']");
+        var el = e.target.closest("[data-tea-block='contact::info::contacts-info::link-email']");
         if (!el) return;
         (window._tmr = window._tmr || []).push({ id: "3803666", type: "reachGoal", goal: "email_click" });
     });
